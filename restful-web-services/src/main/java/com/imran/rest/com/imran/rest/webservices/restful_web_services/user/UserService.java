@@ -28,7 +28,13 @@ public class UserService {
         }
         return null;
     }
-
+    public void deleteUser(int id){
+        for(User us:users){
+            if(us.getId()==id){
+                users.remove(us);
+            }
+        }
+    }
     public User saveUser(User user) {
         user.setId(++userCount); 
         users.add(user); 

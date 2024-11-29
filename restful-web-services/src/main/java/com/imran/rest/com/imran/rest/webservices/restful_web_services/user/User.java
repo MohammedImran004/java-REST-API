@@ -1,7 +1,10 @@
 package com.imran.rest.com.imran.rest.webservices.restful_web_services.user;
 
+import jakarta.validation.constraints.Size;
+
 public class User {
     private Integer id;
+    @Size(min=2,message = "The name must be at least 2 characters long")
     private String name;
     private int age;
     public User(int age, Integer id, String name) {
